@@ -50,6 +50,8 @@ imap(',', ',<c-g>u')
 imap('.', '.<c-g>u')
 imap(';', ';<c-g>u')
 
+imap('jj', '<Esc>', 'jj -> normal mode')
+
 nmap('Q', '<Nop>')
 
 --- Send code to terminal with vim-slime
@@ -314,6 +316,7 @@ wk.add({
     { '<m-I>', insert_py_chunk, desc = 'python code chunk' },
     { '<m-i>', insert_r_chunk, desc = 'r code chunk' },
     { '<m-m>', ' |>', desc = 'pipe' },
+    { 'jj', '<Esc>', desc = 'jj -> normal mode' },
   },
 }, { mode = 'i' })
 
