@@ -407,7 +407,7 @@ wk.add({
     { "<leader>dt", group = "[t]est" },
     { "<leader>e", group = "[e]dit" },
     { "<leader>e", group = "[t]mux" },
-    { "<leader>fd", [[eval "$(tmux showenv -s DISPLAY)"]], desc = "[d]isplay fix" },
+    { "<leader>fD", [[eval "$(tmux showenv -s DISPLAY)"]], desc = "[d]isplay fix" },
     { "<leader>f", group = "[f]ind (telescope)" },
     { "<leader>f<space>", "<cmd>Telescope buffers<cr>", desc = "[ ] buffers" },
     { "<leader>fM", "<cmd>Telescope man_pages<cr>", desc = "[M]an pages" },
@@ -478,24 +478,27 @@ wk.add({
     { "<leader>Or", insert_plain_r_chunk, desc = "[r] code chunk" },
     { "<leader>Ob", insert_plain_bash_chunk, desc = "[b]ash code chunk" },
 
-    { "<leader>q", group = "[q]uarto" },
+    -- Quato group (<leader>Q)
+
+    { "<leader>Q", group = "[Q]uarto" }, -- Changed from q to Q
     {
-      "<leader>qE",
+      "<leader>QE",
       function()
         require("otter").export(true)
       end,
       desc = "[E]xport with overwrite",
     },
-    { "<leader>qa", ":QuartoActivate<cr>", desc = "[a]ctivate" },
-    { "<leader>qe", require("otter").export, desc = "[e]xport" },
-    { "<leader>qh", ":QuartoHelp ", desc = "[h]elp" },
-    { "<leader>qp", ":lua require'quarto'.quartoPreview()<cr>", desc = "[p]review" },
-    { "<leader>qu", ":lua require'quarto'.quartoUpdatePreview()<cr>", desc = "[u]pdate preview" },
-    { "<leader>qq", ":lua require'quarto'.quartoClosePreview()<cr>", desc = "[q]uiet preview" },
-    { "<leader>qr", group = "[r]un" },
-    { "<leader>qra", ":QuartoSendAll<cr>", desc = "run [a]ll" },
-    { "<leader>qrb", ":QuartoSendBelow<cr>", desc = "run [b]elow" },
-    { "<leader>qrr", ":QuartoSendAbove<cr>", desc = "to cu[r]sor" },
+    { "<leader>Qa", ":QuartoActivate<cr>", desc = "[a]ctivate" },
+    { "<leader>Qe", require("otter").export, desc = "[e]xport" },
+    { "<leader>Qh", ":QuartoHelp ", desc = "[h]elp" },
+    { "<leader>Qp", ":lua require'quarto'.quartoPreview()<cr>", desc = "[p]review" },
+    { "<leader>Qu", ":lua require'quarto'.quartoUpdatePreview()<cr>", desc = "[u]pdate preview" },
+    { "<leader>Qq", ":lua require'quarto'.quartoClosePreview()<cr>", desc = "[q]uiet preview" },
+    { "<leader>Qr", group = "[r]un" },
+    { "<leader>Qra", ":QuartoSendAll<cr>", desc = "run [a]ll" },
+    { "<leader>Qrb", ":QuartoSendBelow<cr>", desc = "run [b]elow" },
+    { "<leader>Qrr", ":QuartoSendAbove<cr>", desc = "to cu[r]sor" },
+
     { "<leader>r", group = "[r] R specific tools" },
     { "<leader>rt", show_r_table, desc = "show [t]able" },
     { "<leader>v", group = "[v]im" },
