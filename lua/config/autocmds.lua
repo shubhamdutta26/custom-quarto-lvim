@@ -22,5 +22,6 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = { "quarto", "markdown" },
   callback = function()
     vim.opt_local.conceallevel = 0
+    vim.treesitter.start()
   end,
 })
