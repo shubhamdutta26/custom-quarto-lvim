@@ -12,8 +12,9 @@ return {
     },
     keys = {
       { "<leader>nd", ":Obsidian today<cr>", desc = "obsidian [d]aily" },
-      { "<leader>nt", ":e ~/notes/readme.md<cr>", desc = "obsidian [t]odo" },
       { "<leader>ny", ":Obsidian yesterday<cr>", desc = "obsidian [y]esterday" },
+      { "<leader>nt", ":Obsidian tomorrow<cr>", desc = "obsidian [t]omorrow" },
+      { "<leader>nT", ":e ~/notes/readme.md<cr>", desc = "obsidian [T]odo" },
       { "<leader>nb", ":Obsidian backlinks<cr>", desc = "obsidian [b]acklinks" },
       { "<leader>nl", ":Obsidian link<cr>", desc = "obsidian [l]ink selection" },
       { "<leader>nf", ":Obsidian follow_link<cr>", desc = "obsidian [f]ollow link" },
