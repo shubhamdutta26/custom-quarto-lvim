@@ -11,17 +11,39 @@ return {
       "nvim-lua/plenary.nvim",
     },
     keys = {
-      { "<leader>nd", ":Obsidian today<cr>", desc = "obsidian [d]aily" },
-      { "<leader>ny", ":Obsidian yesterday<cr>", desc = "obsidian [y]esterday" },
-      { "<leader>nt", ":Obsidian tomorrow<cr>", desc = "obsidian [t]omorrow" },
-      { "<leader>nT", ":e ~/notes/readme.md<cr>", desc = "obsidian [T]odo" },
-      { "<leader>nb", ":Obsidian backlinks<cr>", desc = "obsidian [b]acklinks" },
-      { "<leader>nl", ":Obsidian link<cr>", desc = "obsidian [l]ink selection" },
-      { "<leader>nf", ":Obsidian follow_link<cr>", desc = "obsidian [f]ollow link" },
-      { "<leader>nn", ":Obsidian new<cr>", desc = "obsidian [n]ew" },
-      { "<leader>ns", ":Obsidian search<cr>", desc = "obsidian [s]earch" },
-      { "<leader>no", ":Obsidian quick_switch<cr>", desc = "obsidian [o]pen quickswitch" },
-      { "<leader>nO", ":Obsidian open<cr>", desc = "obsidian [O]pen in app" },
+      --  PERSONAL MENU (<leader>np...)
+      { "<leader>npd", ":Obsidian workspace Personal<cr>:Obsidian today<cr>", desc = "[P]ersonal: [d]aily" },
+      { "<leader>npy", ":Obsidian workspace Personal<cr>:Obsidian yesterday<cr>", desc = "[P]ersonal: [y]esterday" },
+      { "<leader>npt", ":Obsidian workspace Personal<cr>:Obsidian tomorrow<cr>", desc = "[P]ersonal: [t]omorrow" },
+      { "<leader>npn", ":Obsidian workspace Personal<cr>:Obsidian new<cr>", desc = "[P]ersonal: [n]ew" },
+      {
+        "<leader>npN",
+        ":Obsidian workspace Personal<cr>:Obsidian new_from_template<cr>",
+        desc = "[P]ersonal: [N]ew from template",
+      },
+      { "<leader>nps", ":Obsidian workspace Personal<cr>:Obsidian search<cr>", desc = "[P]ersonal: [s]earch" },
+      { "<leader>npT", ":e ~/Documents/Personal/readme.md<cr>", desc = "[P]ersonal: [T]odo" },
+
+      -- WORK MENU (<leader>nw...)
+      { "<leader>nwd", ":Obsidian workspace Work<cr>:Obsidian today<cr>", desc = "[W]ork: [d]aily" },
+      { "<leader>nwy", ":Obsidian workspace Work<cr>:Obsidian yesterday<cr>", desc = "[W]ork: [y]esterday" },
+      { "<leader>nwt", ":Obsidian workspace Work<cr>:Obsidian tomorrow<cr>", desc = "[W]ork: [t]omorrow" },
+      { "<leader>nwn", ":Obsidian workspace Work<cr>:Obsidian new<cr>", desc = "[W]ork: [n]ew" },
+      {
+        "<leader>nwN",
+        ":Obsidian workspace Work<cr>:Obsidian new_from_template<cr>",
+        desc = "[W]ork: [N]ew from template",
+      },
+      { "<leader>nws", ":Obsidian workspace Work<cr>:Obsidian search<cr>", desc = "[W]ork: [s]earch" },
+      { "<leader>nwT", ":e ~/Documents/Work/readme.md<cr>", desc = "[W]ork: [T]odo" },
+
+      -- UTILITIES (Context Aware)
+      { "<leader>nl", ":Obsidian links<cr>", desc = "Link selection" },
+      { "<leader>nf", ":Obsidian follow_links<cr>", desc = "Follow link" },
+      { "<leader>nb", ":Obsidian backlink<cr>", desc = "Backlinks" },
+      { "<leader>nO", ":Obsidian open<cr>", desc = "Open in App" },
+      { "<leader>ni", ":Obsidian paste_img<cr>", desc = "[I]mage image" },
+      { "<leader>nr", ":Obsidian rename<cr>", desc = "[R]ename note" },
     },
     opts = {
       legacy_commands = false,
@@ -31,8 +53,12 @@ return {
       },
       workspaces = {
         {
-          name = "Notes",
-          path = "~/Documents/Notes",
+          name = "Personal",
+          path = "~/Documents/Personal",
+        },
+        {
+          name = "Work",
+          path = "~/Documents/Work",
         },
       },
       -- Optional, for templates (see below).
